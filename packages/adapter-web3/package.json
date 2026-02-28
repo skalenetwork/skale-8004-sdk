@@ -1,0 +1,25 @@
+{
+  "name": "@skalenetwork/8004-adapter-web3",
+  "version": "0.1.0",
+  "type": "module",
+  "main": "./dist/index.mjs",
+  "types": "./dist/index.d.mts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.mts",
+      "import": "./dist/index.mjs"
+    }
+  },
+  "dependencies": {
+    "@skalenetwork/8004": "workspace:*"
+  },
+  "peerDependencies": {
+    "web3": "^4.0.0"
+  },
+  "scripts": {
+    "build": "tsdown src/index.ts --format esm --dts --out-dir dist",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "node --test",
+    "clean": "rm -rf dist tsconfig.tsbuildinfo"
+  }
+}

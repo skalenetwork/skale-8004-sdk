@@ -1,0 +1,33 @@
+{
+  "name": "@skalenetwork/8004",
+  "version": "0.1.0",
+  "description": "Core interfaces and types for skale8004-ts",
+  "type": "module",
+  "main": "./dist/index.mjs",
+  "types": "./dist/index.d.mts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.mts",
+      "import": "./dist/index.mjs"
+    }
+  },
+  "scripts": {
+    "build": "tsdown src/index.ts --format esm --dts --out-dir dist",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "jest --config jest.config.js",
+    "clean": "rm -rf dist tsconfig.tsbuildinfo"
+  },
+  "dependencies": {
+    "graphql-request": "^6.1.0",
+    "ipfs-http-client": "^60.0.1",
+    "viem": "^2.38.5"
+  },
+  "devDependencies": {
+    "@jest/globals": "^30.2.0",
+    "@types/jest": "^29.5.14",
+    "dotenv": "^16.6.1",
+    "jest": "^29.7.0",
+    "ts-jest": "^29.4.4",
+    "tsx": "^4.20.5"
+  }
+}

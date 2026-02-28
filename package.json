@@ -1,0 +1,37 @@
+{
+  "name": "skale8004-ts",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Clean TypeScript base + adapters for viem, ethers v6, and web3.js",
+  "type": "module",
+  "packageManager": "pnpm@10.17.1",
+  "scripts": {
+    "build": "turbo run build",
+    "test": "turbo run test",
+    "lint": "oxlint packages",
+    "typecheck": "turbo run typecheck",
+    "clean": "turbo run clean --concurrency=1",
+    "check": "pnpm lint && pnpm typecheck && pnpm test",
+    "dev:cli": "pnpm --filter @skalenetwork/8004-cli build && node packages/cli/dist/cli.mjs --help",
+    "example:core": "pnpm --filter @skalenetwork/8004 build && tsx examples/core/basic-sdk.ts",
+    "example:adapters": "pnpm --filter @skalenetwork/8004-adapter-viem build && pnpm --filter @skalenetwork/8004-adapter-ethers build && pnpm --filter @skalenetwork/8004-adapter-web3 build && tsx examples/adapters/adapter-usage.ts",
+    "example:all": "pnpm example:core && pnpm example:adapters"
+  },
+  "dependencies": {
+    "@skalenetwork/8004": "workspace:*",
+    "@skalenetwork/8004-adapter-ethers": "workspace:*",
+    "@skalenetwork/8004-adapter-viem": "workspace:*",
+    "@skalenetwork/8004-adapter-web3": "workspace:*"
+  },
+  "devDependencies": {
+    "oxlint": "^1.14.0",
+    "@types/node": "^24.5.2",
+    "tsx": "^4.20.5",
+    "turbo": "^2.5.6",
+    "tsdown": "^0.16.6",
+    "typescript": "^5.9.2"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

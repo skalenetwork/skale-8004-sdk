@@ -1,0 +1,10 @@
+{
+  "files": [],
+  "references": [
+    { "path": "./packages/core" },
+    { "path": "./packages/adapter-viem" },
+    { "path": "./packages/adapter-ethers" },
+    { "path": "./packages/adapter-web3" },
+    { "path": "./packages/cli" }
+  ]
+}

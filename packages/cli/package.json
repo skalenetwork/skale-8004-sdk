@@ -1,0 +1,20 @@
+{
+  "name": "@skalenetwork/8004-cli",
+  "version": "0.1.0",
+  "type": "module",
+  "bin": {
+    "skale8004": "./dist/cli.mjs"
+  },
+  "main": "./dist/cli.mjs",
+  "types": "./dist/cli.d.mts",
+  "dependencies": {
+    "@skalenetwork/8004": "workspace:*",
+    "commander": "^14.0.1"
+  },
+  "scripts": {
+    "build": "tsdown src/cli.ts --format esm --dts --out-dir dist",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "node --test",
+    "clean": "rm -rf dist tsconfig.tsbuildinfo"
+  }
+}
