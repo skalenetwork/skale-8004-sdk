@@ -5,7 +5,6 @@ Clean TypeScript foundation for blockchain interactions.
 - `@skalenetwork/8004-adapter-viem`: viem adapter.
 - `@skalenetwork/8004-adapter-ethers`: ethers v6 adapter.
 - `@skalenetwork/8004-adapter-web3`: web3.js adapter.
-- `@skalenetwork/8004-skale-x402-proxy`: x402-gated SKALE ERC-8004 proxy helper.
 - `@skalenetwork/8004-cli`: polished CLI for developer workflows.
 ## Quickstart
 ```bash

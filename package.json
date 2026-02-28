@@ -1,8 +1,8 @@
 {
-  "name": "skale8004-ts",
+  "name": "skale8004-monorepo",
   "private": true,
   "version": "0.1.0",
-  "description": "Clean TypeScript base + adapters for viem, ethers v6, and web3.js",
+  "description": "SKALE Network ERC-8004 SDK for viem, ethers v6, and web3.js",
   "type": "module",
   "packageManager": "pnpm@10.17.1",
   "scripts": {
